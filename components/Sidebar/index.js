@@ -31,7 +31,6 @@ const WebSidebar = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#DAC0A3",
-    paddingLeft: 20,
     paddingTop: 10,
     width: windowWidth * 0.1,
     height: windowHeight,
@@ -41,6 +40,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: "black",
     textTransform: "uppercase",
+    borderBottomWidth: 2,
+    borderStyle: "dashed",
+    paddingLeft: 20,
+    paddingBottom: 5,
   },
   menu: {
     display: "flex",
@@ -58,6 +61,7 @@ const styles = StyleSheet.create({
     color: "black ",
     marginBottom: 10,
     cursor: "pointer",
+    paddingLeft: 10,
   },
   logOut: {
     position: "absolute",
