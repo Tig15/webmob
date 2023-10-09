@@ -5,7 +5,12 @@ const { commonComponents, webComponents, mobileComponents } = config;
 
 const ComponentManager = {
   getComponent: (componentName) => {
-    if (Platform.OS === "web") {
+    const commonComponentLength = commonComponents?.filter(
+      (a) => a.name == componentName
+    )?.length;
+    if (commonComponentLength > 0) {
+      return getCommonComponent(componentName);
+    } else if (Platform.OS === "web") {
       console.log("Web");
       return getWebComponent(componentName);
     } else if (Platform.OS === "android" || Platform.OS === "ios") {
@@ -28,10 +33,10 @@ function getMobileComponent(componentName) {
   );
 }
 
-// function getCommonComponent(componentName) {
-//   return (
-//     commonComponents?.find((a) => a.name == componentName)?.component || <></>
-//   );
-// }
+function getCommonComponent(componentName) {
+  return (
+    commonComponents?.find((a) => a.name == componentName)?.component || <></>
+  );
+}
 
 export default ComponentManager;

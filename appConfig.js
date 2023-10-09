@@ -1,7 +1,9 @@
-import MobileBottomTabBar from "./components/BottomTab";
+import MobileBottomTabBar from "./navigation/Navigation/HomeStack";
 import NavHead from "./components/NavHead";
+import ProductCard from "./components/ProductCard";
 import CommonSearch from "./components/Search";
 import WebSidebar from "./components/Sidebar";
+import AppNavigator from "./navigation/appNavigator";
 
 const config = {
   webComponents: [
@@ -13,11 +15,15 @@ const config = {
       name: "NavHead",
       component: <NavHead />,
     },
+    {
+      name: "ProductCard",
+      component: <ProductCard />,
+    },
   ],
   mobileComponents: [
     {
-      name: "BottomTabBar",
-      component: <MobileBottomTabBar />,
+      name: "AppNavigate",
+      component: <AppNavigator />,
     },
   ],
 };

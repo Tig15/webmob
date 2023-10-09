@@ -7,14 +7,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import CommonSearch from "../Search";
+import tailwind from "twrnc";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const WebSidebar = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>Web-Mob</Text>
+    <View style={tailwind`bg-orange-300 h-[90%] w-45 pt-4 gap-5`}>
       <ul style={styles.menu}>
         <li style={styles.menuItem}>Home</li>
         <li style={styles.menuItem}>Dashboard</li>
@@ -29,22 +29,6 @@ const WebSidebar = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#DAC0A3",
-    paddingTop: 10,
-    width: windowWidth * 0.1,
-    height: windowHeight,
-    gap: 40,
-  },
-  heading: {
-    fontSize: 28,
-    color: "black",
-    textTransform: "uppercase",
-    borderBottomWidth: 2,
-    borderStyle: "dashed",
-    paddingLeft: 20,
-    paddingBottom: 5,
-  },
   menu: {
     display: "flex",
     flexDirection: "column",
