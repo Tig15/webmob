@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeStack from "./Navigation/HomeStack";
 import SetStack from "./Navigation/SettingStack";
 import { Ionicons } from "@expo/vector-icons";
+import LoginScreen from "../screens/LoginScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,15 @@ const AppNavigator = () => {
           options={{
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="settings" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="login"
+          component={LoginScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="log-in" color={color} size={size} />
             ),
           }}
         />

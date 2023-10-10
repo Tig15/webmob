@@ -4,6 +4,7 @@ import ProductCard from "./components/ProductCard";
 import CommonSearch from "./components/Search";
 import WebSidebar from "./components/Sidebar";
 import AppNavigator from "./navigation/appNavigator";
+import LoginScreen from "./screens/LoginScreen";
 
 const config = {
   webComponents: [

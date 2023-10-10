@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 import CommonSearch from "../Search";
 import tailwind from "twrnc";
@@ -15,11 +16,14 @@ const windowHeight = Dimensions.get("window").height;
 const WebSidebar = () => {
   return (
     <View style={tailwind`bg-orange-300 h-[90%] w-45 pt-4 gap-5`}>
-      <ul style={styles.menu}>
-        <li style={styles.menuItem}>Home</li>
-        <li style={styles.menuItem}>Dashboard</li>
-        <li style={styles.menuItem}>About Us</li>
-      </ul>
+      <View style={styles.menu}>
+        <Pressable>
+          <Text style={styles.menuItem}>Home</Text>
+        </Pressable>
+        <Pressable>
+          <Text style={styles.menuItem}>Settings</Text>
+        </Pressable>
+      </View>
 
       <TouchableOpacity style={styles.logOut}>
         <Text style={styles.inside}>LogOut</Text>
